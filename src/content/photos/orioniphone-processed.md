@@ -1,5 +1,6 @@
 ---
 title: "Orion Wide-field (iPhone)"
+slug: "orion-widefield"
 target: "Orion"
 date: 2026-01-10
 featured: false

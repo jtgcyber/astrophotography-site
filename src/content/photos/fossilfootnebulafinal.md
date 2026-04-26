@@ -1,5 +1,6 @@
 ---
 title: "Fossil's Footprint Nebula"
+slug: "fossil-foot-nebula"
 target: "NGC 1491"
 date: 2025-12-05
 integration_hours: 6

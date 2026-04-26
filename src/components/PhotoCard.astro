@@ -29,7 +29,7 @@ if (integration_hours) {
 }
 ---
 
-<a href={`/photos/${photo.id}/`} class="card">
+<a href={`/photos/${photo.data.slug ?? photo.id}/`} class="card">
   <div class="image-frame">
     <Image
       src={image}

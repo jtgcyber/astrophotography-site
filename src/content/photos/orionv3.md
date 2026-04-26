@@ -1,5 +1,6 @@
 ---
 title: "Orion Nebula (v3)"
+slug: "orion-nebula-v3"
 target: "M42"
 date: 2026-04-26
 featured: false

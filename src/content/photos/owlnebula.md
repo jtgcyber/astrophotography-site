@@ -1,5 +1,6 @@
 ---
 title: "Owl Nebula"
+slug: "owl-nebula"
 target: "M97"
 date: 2025-03-15
 integration_hours: 5

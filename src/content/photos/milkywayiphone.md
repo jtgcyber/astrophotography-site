@@ -1,5 +1,6 @@
 ---
 title: "Milky Way"
+slug: "milky-way"
 target: "Milky Way Core"
 date: 2025-07-15
 featured: false

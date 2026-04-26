@@ -1,5 +1,6 @@
 ---
 title: "Orion Nebula (Reprocessed)"
+slug: "m42-widefield"
 target: "M42"
 date: 2025-12-20
 integration_hours: 4

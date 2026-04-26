@@ -1,5 +1,6 @@
 ---
 title: "Whirlpool Galaxy"
+slug: "whirlpool-galaxy"
 target: "M51"
 date: 2025-05-15
 integration_hours: 6

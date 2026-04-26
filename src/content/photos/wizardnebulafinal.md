@@ -1,5 +1,6 @@
 ---
 title: "Wizard Nebula"
+slug: "wizard-nebula"
 target: "NGC 7380"
 date: 2025-10-20
 integration_hours: 10

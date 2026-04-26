@@ -1,5 +1,6 @@
 ---
 title: "Markarian's Chain"
+slug: "markarians-chain"
 target: "Markarian's Chain"
 date: 2025-05-05
 integration_hours: 5

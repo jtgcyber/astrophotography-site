@@ -1,5 +1,6 @@
 ---
 title: "Bode's Galaxy & Cigar Galaxy"
+slug: "bodes-galaxy"
 target: "M81 / M82"
 date: 2025-04-10
 integration_hours: 5

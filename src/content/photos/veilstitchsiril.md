@@ -1,5 +1,6 @@
 ---
 title: "Veil Nebula (Stitched Mosaic)"
+slug: "veil-nebula-mosaic"
 target: "NGC 6960 / NGC 6992"
 date: 2025-08-05
 integration_hours: 10

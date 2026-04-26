@@ -21,6 +21,26 @@
       "headers": {
         "Cache-Control": "public, max-age=31536000, immutable"
       }
-    }
+    },
+    { "route": "/photos/americannebula/", "redirect": "/photos/north-america-nebula/", "statusCode": 301 },
+    { "route": "/photos/bode-s-galaxy/", "redirect": "/photos/bodes-galaxy/", "statusCode": 301 },
+    { "route": "/photos/crescent-nebula-take-2/", "redirect": "/photos/crescent-nebula/", "statusCode": 301 },
+    { "route": "/photos/elephant-trunk-brighter-1/", "redirect": "/photos/elephant-trunk-nebula/", "statusCode": 301 },
+    { "route": "/photos/flammingstarrjpeg/", "redirect": "/photos/flaming-star-nebula/", "statusCode": 301 },
+    { "route": "/photos/fossilfootnebulafinal/", "redirect": "/photos/fossil-foot-nebula/", "statusCode": 301 },
+    { "route": "/photos/heartnebula/", "redirect": "/photos/heart-nebula/", "statusCode": 301 },
+    { "route": "/photos/horseheadandflamejpeg/", "redirect": "/photos/horsehead-and-flame/", "statusCode": 301 },
+    { "route": "/photos/m42-no-gradient-1/", "redirect": "/photos/m42-widefield/", "statusCode": 301 },
+    { "route": "/photos/markarian-s-chain/", "redirect": "/photos/markarians-chain/", "statusCode": 301 },
+    { "route": "/photos/milkywayiphone/", "redirect": "/photos/milky-way/", "statusCode": 301 },
+    { "route": "/photos/monkeyheadjpeg/", "redirect": "/photos/monkey-head-nebula/", "statusCode": 301 },
+    { "route": "/photos/moonrightwayup/", "redirect": "/photos/moon/", "statusCode": 301 },
+    { "route": "/photos/orioniphone-processed/", "redirect": "/photos/orion-widefield/", "statusCode": 301 },
+    { "route": "/photos/orionv3/", "redirect": "/photos/orion-nebula-v3/", "statusCode": 301 },
+    { "route": "/photos/owlnebula/", "redirect": "/photos/owl-nebula/", "statusCode": 301 },
+    { "route": "/photos/soulnebulastitched/", "redirect": "/photos/soul-nebula/", "statusCode": 301 },
+    { "route": "/photos/veilstitchsiril/", "redirect": "/photos/veil-nebula-mosaic/", "statusCode": 301 },
+    { "route": "/photos/whirlpoolfinal/", "redirect": "/photos/whirlpool-galaxy/", "statusCode": 301 },
+    { "route": "/photos/wizardnebulafinal/", "redirect": "/photos/wizard-nebula/", "statusCode": 301 }
   ]
 }

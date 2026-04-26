@@ -7,6 +7,7 @@ const photos = defineCollection({
     z.object({
       title: z.string(),
       target: z.string(),
+      slug: z.string().optional(),
       date: z.coerce.date(),
       integration_hours: z.number().positive().optional(),
       featured: z.boolean().default(false),

@@ -1,5 +1,6 @@
 ---
 title: "Flaming Star Nebula"
+slug: "flaming-star-nebula"
 target: "IC 405"
 date: 2026-01-18
 integration_hours: 5

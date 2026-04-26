@@ -1,17 +1,18 @@
 ---
 title: "Wizard Nebula"
 target: "NGC 7380"
-date: 2026-04-26
-integration_hours: 0
+date: 2025-10-20
+integration_hours: 10
 featured: false
 image: "./wizardnebulafinal.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/wizardnebulafinal.jpg"
-location: ""
+location: "Glasgow, back garden"
 equipment:
-  mount: "Unknown"
-  telescope: "Unknown"
-  camera: "Unknown"
-  focal_length_mm: 0
+  mount: "Sky-Watcher EQ6-R Pro"
+  telescope: "ASKAR 120mm APO"
+  camera: "ZWO ASI 071MC Pro"
+  focal_length_mm: 840
+  filters: "Optolong L-Pro"
 processing: ""
 ---
 

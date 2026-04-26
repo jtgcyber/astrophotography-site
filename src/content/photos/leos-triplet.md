@@ -1,17 +1,18 @@
 ---
 title: "Leo Triplet"
 target: "M65 / M66 / NGC 3628"
-date: 2026-04-26
-integration_hours: 0
+date: 2025-04-20
+integration_hours: 5
 featured: false
 image: "./leos-triplet.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/leos-triplet.jpg"
-location: ""
+location: "Glasgow, back garden"
 equipment:
-  mount: "Unknown"
-  telescope: "Unknown"
-  camera: "Unknown"
-  focal_length_mm: 0
+  mount: "Sky-Watcher EQ6-R Pro"
+  telescope: "ASKAR 120mm APO"
+  camera: "ZWO ASI 071MC Pro"
+  focal_length_mm: 840
+  filters: "Optolong L-Pro"
 processing: ""
 ---
 

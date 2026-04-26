@@ -1,17 +1,18 @@
 ---
 title: "Crescent Nebula (Take 2)"
 target: "NGC 6888"
-date: 2026-04-26
-integration_hours: 0
+date: 2025-08-20
+integration_hours: 7
 featured: false
 image: "./crescent-nebula-take-2.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/crescent-nebula-take-2.png"
-location: ""
+location: "Glasgow, back garden"
 equipment:
-  mount: "Unknown"
-  telescope: "Unknown"
-  camera: "Unknown"
-  focal_length_mm: 0
+  mount: "Sky-Watcher EQ6-R Pro"
+  telescope: "Sky-Watcher Evostar 80ED"
+  camera: "ZWO ASI 071MC Pro"
+  focal_length_mm: 480
+  filters: "Optolong L-Pro"
 processing: ""
 ---
 

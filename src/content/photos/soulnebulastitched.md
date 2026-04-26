@@ -1,17 +1,18 @@
 ---
 title: "Soul Nebula"
 target: "IC 1848"
-date: 2026-04-26
-integration_hours: 0
+date: 2025-11-15
+integration_hours: 8
 featured: false
 image: "./soulnebulastitched.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/soulnebulastitched.jpg"
-location: ""
+location: "Glasgow, back garden"
 equipment:
-  mount: "Unknown"
-  telescope: "Unknown"
-  camera: "Unknown"
-  focal_length_mm: 0
+  mount: "Sky-Watcher EQ6-R Pro"
+  telescope: "ASKAR 120mm APO"
+  camera: "ZWO ASI 071MC Pro"
+  focal_length_mm: 840
+  filters: "Optolong L-Pro"
 processing: ""
 ---
 

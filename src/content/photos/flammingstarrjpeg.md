@@ -1,17 +1,18 @@
 ---
 title: "Flaming Star Nebula"
 target: "IC 405"
-date: 2026-04-26
-integration_hours: 0
+date: 2026-01-18
+integration_hours: 5
 featured: false
 image: "./flammingstarrjpeg.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/flammingstarrjpeg.jpg"
-location: ""
+location: "Campbeltown, back garden (Bortle 2)"
 equipment:
-  mount: "Unknown"
-  telescope: "Unknown"
-  camera: "Unknown"
-  focal_length_mm: 0
+  mount: "Sky-Watcher EQ6-R Pro"
+  telescope: "ASKAR 120mm APO"
+  camera: "ZWO ASI 071MC Pro"
+  focal_length_mm: 840
+  filters: "Optolong L-Pro"
 processing: ""
 ---
 

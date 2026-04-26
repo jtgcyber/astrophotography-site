@@ -1,17 +1,18 @@
 ---
 title: "Owl Nebula"
 target: "M97"
-date: 2026-04-26
-integration_hours: 0
+date: 2025-03-15
+integration_hours: 5
 featured: false
 image: "./owlnebula.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/owlnebula.jpg"
-location: ""
+location: "Glasgow, back garden"
 equipment:
-  mount: "Unknown"
-  telescope: "Unknown"
-  camera: "Unknown"
-  focal_length_mm: 0
+  mount: "Sky-Watcher EQ6-R Pro"
+  telescope: "Sky-Watcher Evostar 80ED"
+  camera: "ZWO ASI 071MC Pro"
+  focal_length_mm: 480
+  filters: "Optolong L-Pro"
 processing: ""
 ---
 

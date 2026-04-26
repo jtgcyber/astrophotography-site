@@ -2,8 +2,8 @@
 title: "Milky Way"
 target: "Milky Way Core"
 date: 2025-07-15
-integration_hours: 0
 featured: false
+capture_type: iphone
 image: "./milkywayiphone.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/milkywayiphone.jpg"
 location: "Campbeltown, back garden (Bortle 2)"
@@ -11,7 +11,6 @@ equipment:
   mount: "Tripod"
   telescope: "iPhone"
   camera: "iPhone"
-  focal_length_mm: 0
 processing: "iPhone night mode."
 ---
 

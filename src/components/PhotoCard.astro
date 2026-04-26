@@ -7,12 +7,26 @@ interface Props {
 }
 
 const { photo } = Astro.props;
-const { title, target, date, integration_hours, image } = photo.data;
+const { title, target, date, integration_hours, image, capture_type } = photo.data;
 
-const monthYear = new Intl.DateTimeFormat('en-GB', {
+const monthYear = new Intl.DateTimeFormat('en-US', {
   month: 'short',
   year: 'numeric',
 }).format(date);
+
+const captureLabels: Record<string, string> = {
+  lunar: 'Lunar',
+  planetary: 'Planetary',
+  iphone: 'Wide-field',
+  wide_field: 'Wide-field',
+};
+
+const subParts = [target, monthYear];
+if (integration_hours) {
+  subParts.push(`${integration_hours}h`);
+} else if (captureLabels[capture_type]) {
+  subParts.push(captureLabels[capture_type]);
+}
 ---
 
 <a href={`/photos/${photo.id}/`} class="card">
@@ -28,11 +42,12 @@ const monthYear = new Intl.DateTimeFormat('en-GB', {
   <div class="info">
     <h3 class="title">{title}</h3>
     <p class="sub">
-      <span class="target">{target}</span>
-      <span class="dot">·</span>
-      <span>{monthYear}</span>
-      <span class="dot">·</span>
-      <span>{integration_hours}h</span>
+      {subParts.map((part, i) => (
+        <>
+          {i > 0 && <span class="dot">·</span>}
+          <span class={i === 0 ? 'target' : ''}>{part}</span>
+        </>
+      ))}
     </p>
   </div>
 </a>

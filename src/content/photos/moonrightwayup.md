@@ -2,8 +2,8 @@
 title: "The Moon"
 target: "Moon"
 date: 2026-03-10
-integration_hours: 0
 featured: false
+capture_type: lunar
 image: "./moonrightwayup.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/moonrightwayup.jpg"
 location: "Glasgow, back garden"
@@ -11,8 +11,7 @@ equipment:
   mount: "Sky-Watcher EQ6-R Pro"
   telescope: "Sky-Watcher Evostar 80ED"
   camera: "ZWO ASI120MM Mini"
-  focal_length_mm: 480
-  filters: "" 
+  focal_length_mm: 480 
 processing: "Stacked best frames, wavelets in Registax."
 ---
 

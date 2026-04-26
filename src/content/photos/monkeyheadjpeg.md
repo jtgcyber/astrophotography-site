@@ -13,7 +13,6 @@ equipment:
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
   filters: "Optolong L-Pro"
-processing: ""
 ---
 
 An emission nebula straddling the border of Orion and Gemini, about 6,400 light-years away. It's an active star-forming region where pillars and columns of dark dust are being eroded by the ultraviolet radiation from young, hot stars embedded within — similar in process to the famous Pillars of Creation in M16, though less well known. The "monkey face" shape emerges in wider-field views where the surrounding dark nebulosity frames the brighter emission.

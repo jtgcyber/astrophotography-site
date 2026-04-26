@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { photo } = Astro.props;
 const { Content } = await render(photo);
 
-const fmt = new Intl.DateTimeFormat('en-GB', {
+const fmt = new Intl.DateTimeFormat('en-US', {
   day: 'numeric',
   month: 'long',
   year: 'numeric',
@@ -22,22 +22,55 @@ const fmt = new Intl.DateTimeFormat('en-GB', {
 
 const eq = photo.data.equipment;
 const acq = photo.data.acquisition;
+const captureType = photo.data.capture_type;
+
+const captureLabels: Record<string, string> = {
+  lunar: 'Lunar capture',
+  planetary: 'Planetary capture',
+  iphone: 'Wide-field capture',
+  wide_field: 'Wide-field capture',
+};
+
+// Build header meta segments
+const metaParts: string[] = [fmt.format(photo.data.date)];
+if (photo.data.location) metaParts.push(photo.data.location);
+if (photo.data.integration_hours) {
+  metaParts.push(`${photo.data.integration_hours}h total integration`);
+} else if (captureLabels[captureType]) {
+  metaParts.push(captureLabels[captureType]);
+}
+
+// Build description for meta tag
+const descParts = [photo.data.target];
+if (photo.data.integration_hours) descParts.push(`${photo.data.integration_hours} hours of integration`);
+if (eq?.telescope) descParts.push(`captured with ${eq.telescope}`);
+const description = descParts.join(' — ');
+
+// Build spec rows — only include rows with actual data
+type SpecRow = { label: string; value: string };
+const specRows: SpecRow[] = [];
+if (eq?.mount) specRows.push({ label: 'Mount', value: eq.mount });
+if (eq?.telescope) specRows.push({ label: 'Telescope', value: eq.telescope });
+if (eq?.camera) specRows.push({ label: 'Camera', value: eq.camera });
+if (eq?.focal_length_mm) specRows.push({ label: 'Focal length', value: `${eq.focal_length_mm}mm` });
+if (eq?.filters) specRows.push({ label: 'Filters', value: eq.filters });
+if (eq?.guiding) specRows.push({ label: 'Guiding', value: eq.guiding });
+if (acq?.frames) specRows.push({ label: 'Frames', value: acq.frames });
+if (acq?.exposure) specRows.push({ label: 'Total exposure', value: acq.exposure });
+if (acq?.gain) specRows.push({ label: 'Gain', value: acq.gain });
+if (acq?.calibration) specRows.push({ label: 'Calibration', value: acq.calibration });
 ---
 
 <Layout
   title={`${photo.data.title} — John Greig Astrophotography`}
-  description={`${photo.data.target} captured with ${photo.data.integration_hours} hours of integration.`}
+  description={description}
 >
   <article class="article">
     <!-- header -->
     <header class="wrap head">
       <span class="eyebrow">{photo.data.target}</span>
       <h1>{photo.data.title}</h1>
-      <p class="head-meta">
-        {fmt.format(photo.data.date)}
-        {photo.data.location ? ` · ${photo.data.location}` : ''}
-        · {photo.data.integration_hours}h total integration
-      </p>
+      <p class="head-meta">{metaParts.join(' · ')}</p>
     </header>
 
     <!-- main image -->
@@ -62,27 +95,26 @@ const acq = photo.data.acquisition;
         <Content />
       </div>
 
-      <aside class="specs">
-        <h2 class="specs-h">Acquisition</h2>
-        <dl>
-          <div class="row"><dt>Mount</dt><dd>{eq.mount}</dd></div>
-          <div class="row"><dt>Telescope</dt><dd>{eq.telescope}</dd></div>
-          <div class="row"><dt>Camera</dt><dd>{eq.camera}</dd></div>
-          <div class="row"><dt>Focal length</dt><dd>{eq.focal_length_mm}mm</dd></div>
-          {eq.filters && <div class="row"><dt>Filters</dt><dd>{eq.filters}</dd></div>}
-          {eq.guiding && <div class="row"><dt>Guiding</dt><dd>{eq.guiding}</dd></div>}
-          {acq?.frames && <div class="row"><dt>Frames</dt><dd>{acq.frames}</dd></div>}
-          {acq?.exposure && <div class="row"><dt>Total exposure</dt><dd>{acq.exposure}</dd></div>}
-          {acq?.gain && <div class="row"><dt>Gain</dt><dd>{acq.gain}</dd></div>}
-          {acq?.calibration && <div class="row"><dt>Calibration</dt><dd>{acq.calibration}</dd></div>}
-        </dl>
-        {photo.data.processing && (
-          <>
-            <h2 class="specs-h" style="margin-top: 32px;">Processing</h2>
-            <p class="processing">{photo.data.processing}</p>
-          </>
-        )}
-      </aside>
+      {(specRows.length > 0 || photo.data.processing) && (
+        <aside class="specs">
+          {specRows.length > 0 && (
+            <>
+              <h2 class="specs-h">Acquisition</h2>
+              <dl>
+                {specRows.map((row) => (
+                  <div class="row"><dt>{row.label}</dt><dd>{row.value}</dd></div>
+                ))}
+              </dl>
+            </>
+          )}
+          {photo.data.processing && (
+            <>
+              <h2 class="specs-h" style={specRows.length > 0 ? "margin-top: 32px;" : ""}>Processing</h2>
+              <p class="processing">{photo.data.processing}</p>
+            </>
+          )}
+        </aside>
+      )}
     </div>
 
     <div class="wrap back">

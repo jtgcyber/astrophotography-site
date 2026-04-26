@@ -11,10 +11,16 @@ const allPhotos = (await getCollection('photos')).sort(
 const featured = allPhotos.find((p) => p.data.featured) ?? allPhotos[0];
 const recent = allPhotos.filter((p) => p.id !== featured.id).slice(0, 6);
 
-const fmt = new Intl.DateTimeFormat('en-GB', {
+const fmt = new Intl.DateTimeFormat('en-US', {
   month: 'long',
   year: 'numeric',
 });
+
+const heroMeta: string[] = [];
+if (featured.data.integration_hours) heroMeta.push(`${featured.data.integration_hours}h integration`);
+if (featured.data.equipment?.focal_length_mm) heroMeta.push(`${featured.data.equipment.focal_length_mm}mm`);
+if (featured.data.equipment?.mount) heroMeta.push(featured.data.equipment.mount);
+heroMeta.push(fmt.format(featured.data.date));
 ---
 
 <Layout>
@@ -33,12 +39,7 @@ const fmt = new Intl.DateTimeFormat('en-GB', {
     <div class="wrap hero-text">
       <span class="eyebrow">Featured · {featured.data.target}</span>
       <h1 class="hero-title">{featured.data.title}</h1>
-      <p class="hero-meta">
-        {featured.data.integration_hours}h integration ·
-        {featured.data.equipment.focal_length_mm}mm ·
-        {featured.data.equipment.mount} ·
-        {fmt.format(featured.data.date)}
-      </p>
+      <p class="hero-meta">{heroMeta.join(' · ')}</p>
       <a href={`/photos/${featured.id}/`} class="hero-link">
         View capture →
       </a>

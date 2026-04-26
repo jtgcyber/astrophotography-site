@@ -2,8 +2,8 @@
 title: "Orion Wide-field (iPhone)"
 target: "Orion"
 date: 2026-01-10
-integration_hours: 0
 featured: false
+capture_type: iphone
 image: "./orioniphone-processed.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/orioniphone-processed.jpg"
 location: "Campbeltown, back garden (Bortle 2)"
@@ -11,7 +11,6 @@ equipment:
   mount: "Tripod"
   telescope: "iPhone"
   camera: "iPhone"
-  focal_length_mm: 0
 processing: "iPhone night mode, processed in Snapseed."
 ---
 

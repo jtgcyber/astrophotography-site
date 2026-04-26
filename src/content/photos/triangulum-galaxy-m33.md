@@ -3,7 +3,7 @@ title: "Triangulum Galaxy"
 target: "M33"
 date: 2025-10-10
 integration_hours: 10
-featured: false
+featured: true
 image: "./triangulum-galaxy-m33.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/triangulum-galaxy-m33.jpg"
 location: "Glasgow, back garden"

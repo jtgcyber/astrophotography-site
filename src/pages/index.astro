@@ -1,0 +1,144 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import PhotoCard from '../components/PhotoCard.astro';
+
+const allPhotos = (await getCollection('photos')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+
+const featured = allPhotos.find((p) => p.data.featured) ?? allPhotos[0];
+const recent = allPhotos.filter((p) => p.id !== featured.id).slice(0, 6);
+
+const fmt = new Intl.DateTimeFormat('en-GB', {
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<Layout>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image">
+      <Image
+        src={featured.data.image}
+        alt={`${featured.data.title} (${featured.data.target})`}
+        widths={[800, 1200, 1800, 2400]}
+        sizes="100vw"
+        loading="eager"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="wrap hero-text">
+      <span class="eyebrow">Featured · {featured.data.target}</span>
+      <h1 class="hero-title">{featured.data.title}</h1>
+      <p class="hero-meta">
+        {featured.data.integration_hours}h integration ·
+        {featured.data.equipment.focal_length_mm}mm ·
+        {featured.data.equipment.mount} ·
+        {fmt.format(featured.data.date)}
+      </p>
+      <a href={`/photos/${featured.id}/`} class="hero-link">
+        View capture →
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="recent wrap">
+    <div class="recent-head">
+      <h2>Recent captures</h2>
+      <a href="/gallery/" class="all-link">View all →</a>
+    </div>
+    <div class="grid">
+      {recent.map((p) => <PhotoCard photo={p} />)}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    position: relative;
+    height: 78vh;
+    min-height: 520px;
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+  .hero-image {
+    position: absolute;
+    inset: 0;
+  }
+  .hero-image :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 12, 0.1) 0%,
+      rgba(10, 10, 12, 0.55) 60%,
+      rgba(10, 10, 12, 0.95) 100%
+    );
+  }
+  .hero-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 56px;
+  }
+  .hero-title {
+    margin: 12px 0 16px;
+    max-width: 18ch;
+  }
+  .hero-meta {
+    margin: 0 0 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+    max-width: 60ch;
+  }
+  .hero-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .hero-link:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+
+  .recent-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 36px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .all-link {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+  }
+  .all-link:hover { color: var(--text); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 32px 24px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { height: 70vh; min-height: 460px; margin-bottom: 56px; }
+    .hero-text { bottom: 32px; }
+  }
+</style>

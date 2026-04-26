@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About — John Smith Astrophotography">
+  <section class="wrap intro">
+    <span class="eyebrow">About</span>
+    <h1>About</h1>
+  </section>
+
+  <section class="wrap body">
+    <p>
+      I'm an amateur astrophotographer based in Glasgow, capturing deep-sky
+      objects from a small back-garden setup and the occasional darker site
+      when the weather and life cooperate.
+    </p>
+    <p>
+      What pulls me back to it is the absurdity of the photons themselves —
+      most of what gets recorded on the sensor over a clear night left its
+      source millions of years before any human held a camera. Sit with
+      anything for seven hours and the universe quietly draws itself in.
+    </p>
+    <p>
+      For prints, collaboration, or just to talk about gear, get in touch
+      via <a href="mailto:hello@example.com" class="link">email</a>.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .intro {
+    padding: 80px 0 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+  .intro h1 { margin-top: 12px; }
+  .body {
+    max-width: 64ch;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+  .body p { margin: 0; }
+  .link {
+    color: var(--text);
+    border-bottom: 1px solid var(--border-strong);
+    transition: border-color 0.2s ease;
+  }
+  .link:hover { border-color: var(--text); }
+</style>

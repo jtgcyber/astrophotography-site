@@ -1,0 +1,98 @@
+/* ---------- design tokens ---------- */
+:root {
+  /* surfaces */
+  --bg: #0a0a0c;
+  --bg-elev: #101013;
+  --bg-card: #0d0d10;
+
+  /* text */
+  --text: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(255, 255, 255, 0.62);
+  --text-faint: rgba(255, 255, 255, 0.42);
+
+  /* lines */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  /* accent — kept restrained, only used sparingly */
+  --accent: #c8b8e0;
+
+  /* type */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* layout */
+  --max: 1280px;
+  --gutter: clamp(20px, 4vw, 48px);
+}
+
+/* ---------- reset / baseline ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+
+/* ---------- type scale ---------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.15;
+}
+h1 { font-size: clamp(40px, 6vw, 72px); }
+h2 { font-size: clamp(28px, 3.5vw, 40px); }
+h3 { font-size: clamp(20px, 2.2vw, 26px); }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ---------- layout primitives ---------- */
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
+
+/* ---------- utilities ---------- */
+.divider {
+  height: 1px;
+  background: var(--border);
+  border: 0;
+  margin: 0;
+}
+
+/* keyboard focus is preserved; mouse focus is suppressed */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

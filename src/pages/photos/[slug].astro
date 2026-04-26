@@ -1,0 +1,192 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const photos = await getCollection('photos');
+  return photos.map((photo) => ({
+    params: { slug: photo.id },
+    props: { photo },
+  }));
+}
+
+const { photo } = Astro.props;
+const { Content } = await render(photo);
+
+const fmt = new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
+const eq = photo.data.equipment;
+const acq = photo.data.acquisition;
+---
+
+<Layout
+  title={`${photo.data.title} — John Smith Astrophotography`}
+  description={`${photo.data.target} captured with ${photo.data.integration_hours} hours of integration.`}
+>
+  <article class="article">
+    <!-- header -->
+    <header class="wrap head">
+      <span class="eyebrow">{photo.data.target}</span>
+      <h1>{photo.data.title}</h1>
+      <p class="head-meta">
+        {fmt.format(photo.data.date)}
+        {photo.data.location ? ` · ${photo.data.location}` : ''}
+        · {photo.data.integration_hours}h total integration
+      </p>
+    </header>
+
+    <!-- main image -->
+    <figure class="image-wrap">
+      <Image
+        src={photo.data.image}
+        alt={`${photo.data.title} (${photo.data.target})`}
+        widths={[800, 1200, 1800, 2400]}
+        sizes="(min-width: 1280px) 1200px, 100vw"
+        loading="eager"
+      />
+    </figure>
+
+    <!-- prose + tech specs -->
+    <div class="wrap body">
+      <div class="prose">
+        <Content />
+      </div>
+
+      <aside class="specs">
+        <h2 class="specs-h">Acquisition</h2>
+        <dl>
+          <div class="row"><dt>Mount</dt><dd>{eq.mount}</dd></div>
+          <div class="row"><dt>Telescope</dt><dd>{eq.telescope}</dd></div>
+          <div class="row"><dt>Camera</dt><dd>{eq.camera}</dd></div>
+          <div class="row"><dt>Focal length</dt><dd>{eq.focal_length_mm}mm</dd></div>
+          {eq.filters && <div class="row"><dt>Filters</dt><dd>{eq.filters}</dd></div>}
+          {eq.guiding && <div class="row"><dt>Guiding</dt><dd>{eq.guiding}</dd></div>}
+          {acq?.frames && <div class="row"><dt>Frames</dt><dd>{acq.frames}</dd></div>}
+          {acq?.exposure && <div class="row"><dt>Total exposure</dt><dd>{acq.exposure}</dd></div>}
+          {acq?.gain && <div class="row"><dt>Gain</dt><dd>{acq.gain}</dd></div>}
+          {acq?.calibration && <div class="row"><dt>Calibration</dt><dd>{acq.calibration}</dd></div>}
+        </dl>
+        {photo.data.processing && (
+          <>
+            <h2 class="specs-h" style="margin-top: 32px;">Processing</h2>
+            <p class="processing">{photo.data.processing}</p>
+          </>
+        )}
+      </aside>
+    </div>
+
+    <div class="wrap back">
+      <a href="/gallery/" class="back-link">← All captures</a>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .head {
+    padding: 64px 0 40px;
+    text-align: center;
+  }
+  .head h1 { margin: 14px 0 18px; }
+  .head-meta {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .image-wrap {
+    margin: 0 auto 80px;
+    max-width: 1400px;
+    padding: 0 var(--gutter);
+  }
+  .image-wrap :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 80px;
+    align-items: start;
+  }
+  .prose {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-muted);
+  }
+  .prose :global(p) {
+    margin: 0 0 1.2em;
+  }
+
+  .specs {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+    font-size: 13px;
+  }
+  .specs-h {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 500;
+    margin: 0 0 16px;
+  }
+  dl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .row:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  dt {
+    color: var(--text-faint);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  dd {
+    margin: 0;
+    color: var(--text);
+    font-size: 13px;
+  }
+  .processing {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 13px;
+  }
+
+  .back {
+    margin-top: 80px;
+    padding-bottom: 40px;
+  }
+  .back-link {
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+  }
+  .back-link:hover { color: var(--text); }
+
+  @media (max-width: 900px) {
+    .body { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

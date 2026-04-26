@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  photo: CollectionEntry<'photos'>;
+}
+
+const { photo } = Astro.props;
+const { title, target, date, integration_hours, image } = photo.data;
+
+const monthYear = new Intl.DateTimeFormat('en-GB', {
+  month: 'short',
+  year: 'numeric',
+}).format(date);
+---
+
+<a href={`/photos/${photo.id}/`} class="card">
+  <div class="image-frame">
+    <Image
+      src={image}
+      alt={`${title} (${target})`}
+      widths={[400, 800, 1200]}
+      sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+      class="image"
+    />
+  </div>
+  <div class="info">
+    <h3 class="title">{title}</h3>
+    <p class="sub">
+      <span class="target">{target}</span>
+      <span class="dot">·</span>
+      <span>{monthYear}</span>
+      <span class="dot">·</span>
+      <span>{integration_hours}h</span>
+    </p>
+  </div>
+</a>
+
+<style>
+  .card {
+    display: block;
+    color: inherit;
+  }
+  .image-frame {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--bg-card);
+    border-radius: 4px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease;
+  }
+  .card:hover .image {
+    transform: scale(1.03);
+  }
+  .info {
+    padding: 14px 2px 4px;
+  }
+  .title {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 400;
+    margin: 0 0 4px;
+    line-height: 1.25;
+  }
+  .sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .target {
+    color: var(--text);
+  }
+  .dot {
+    color: var(--text-faint);
+  }
+</style>

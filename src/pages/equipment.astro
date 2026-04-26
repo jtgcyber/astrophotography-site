@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const sections = [
+  {
+    name: 'Mount',
+    items: [
+      { label: 'Sky-Watcher EQ6-R Pro', desc: 'Belt-driven equatorial mount, ~20kg payload.' },
+    ],
+  },
+  {
+    name: 'Optics',
+    items: [
+      { label: 'William Optics GT81 IV', desc: '81mm APO triplet, 478mm native, 810mm with reducer/extender combos.' },
+      { label: 'William Optics ZenithStar 73', desc: '73mm doublet, 430mm focal length. Wide-field workhorse.' },
+    ],
+  },
+  {
+    name: 'Cameras',
+    items: [
+      { label: 'ZWO ASI 071MC Pro', desc: 'Cooled OSC, 16MP APS-C sensor. Main imaging camera.' },
+      { label: 'ZWO ASI 120MM Mini', desc: 'Mono guide camera.' },
+    ],
+  },
+  {
+    name: 'Filters',
+    items: [
+      { label: 'Optolong L-Pro', desc: 'Broadband light pollution suppression for galaxies.' },
+      { label: 'Optolong L-eXtreme', desc: 'Dual narrowband (Ha + OIII), 7nm. For emission nebulae from urban skies.' },
+    ],
+  },
+  {
+    name: 'Software',
+    items: [
+      { label: 'N.I.N.A.', desc: 'Acquisition and sequencing.' },
+      { label: 'PHD2', desc: 'Autoguiding.' },
+      { label: 'Siril', desc: 'Stacking and pre-processing.' },
+      { label: 'GraXpert', desc: 'Gradient and background removal.' },
+      { label: 'Photoshop', desc: 'Final stretch and finish.' },
+    ],
+  },
+];
+---
+
+<Layout title="Equipment — John Smith Astrophotography">
+  <section class="wrap intro">
+    <span class="eyebrow">Equipment</span>
+    <h1>The kit</h1>
+    <p class="lead">
+      A modest-aperture refractor setup optimised for portability and
+      narrowband imaging from a Bortle 7 garden. Most of the data on this
+      site was acquired with this rig.
+    </p>
+  </section>
+
+  <section class="wrap sections">
+    {sections.map((s) => (
+      <article class="section">
+        <h2 class="section-name">{s.name}</h2>
+        <ul class="items">
+          {s.items.map((it) => (
+            <li class="item">
+              <div class="label">{it.label}</div>
+              <p class="desc">{it.desc}</p>
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </section>
+</Layout>
+
+<style>
+  .intro {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+  .intro h1 { margin: 12px 0 18px; }
+  .lead {
+    max-width: 60ch;
+    color: var(--text-muted);
+  }
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  .section {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: 0; }
+  .section-name {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .desc {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 14px;
+    max-width: 60ch;
+  }
+  @media (max-width: 700px) {
+    .section { grid-template-columns: 1fr; gap: 16px; }
+  }
+</style>

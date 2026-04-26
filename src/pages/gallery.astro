@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import PhotoCard from '../components/PhotoCard.astro';
+
+const photos = (await getCollection('photos')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<Layout title="Gallery — John Smith Astrophotography">
+  <section class="wrap intro">
+    <span class="eyebrow">Gallery</span>
+    <h1>Every capture</h1>
+    <p class="lead">
+      Deep-sky targets photographed from Glasgow and the surrounding dark-sky
+      sites. Click any image for the full processing notes and acquisition
+      details.
+    </p>
+  </section>
+
+  <section class="wrap">
+    <div class="grid">
+      {photos.map((p) => <PhotoCard photo={p} />)}
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .intro {
+    padding: 80px 0 56px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+  }
+  .intro h1 {
+    margin: 12px 0 18px;
+  }
+  .lead {
+    max-width: 60ch;
+    color: var(--text-muted);
+    font-size: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px 24px;
+  }
+</style>

@@ -13,7 +13,6 @@ equipment:
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
   filters: "Optolong L-Pro"
-processing: ""
 ---
 
 An emission nebula in Cepheus, about 7,200 light-years away, surrounding the open cluster NGC 7380. The "wizard" shape — a figure with a pointed hat and outstretched arm — emerges in wider-field views when the surrounding dark nebulosity frames the brighter emission. The cluster's young, hot stars are actively sculpting the surrounding gas into pillars and ridges. It's a narrowband favourite, responding particularly well to SHO or HOO palette mapping.

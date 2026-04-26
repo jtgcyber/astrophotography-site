@@ -13,7 +13,6 @@ equipment:
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 480
   filters: "Optolong L-Pro"
-processing: ""
 ---
 
 An emission nebula in Cygnus, about 5,000 light-years distant, formed by the fast stellar wind from the Wolf-Rayet star WR 136 colliding with slower material shed when the star was a red giant. The resulting shock front creates the distinctive crescent-shaped shell of ionised gas. This is a second attempt at this target — a good benchmark for seeing how equipment or technique improvements translate into more detail in the delicate filamentary structure.

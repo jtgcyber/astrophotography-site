@@ -40,7 +40,7 @@ heroMeta.push(fmt.format(featured.data.date));
       <span class="eyebrow">Featured · {featured.data.target}</span>
       <h1 class="hero-title">{featured.data.title}</h1>
       <p class="hero-meta">{heroMeta.join(' · ')}</p>
-      <a href={`/photos/${featured.id}/`} class="hero-link">
+      <a href={`/photos/${featured.data.slug ?? featured.id}/`} class="hero-link">
         View capture →
       </a>
     </div>

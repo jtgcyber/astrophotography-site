@@ -1,5 +1,6 @@
 ---
 title: "Heart Nebula"
+slug: "heart-nebula"
 target: "IC 1805"
 date: 2025-11-08
 integration_hours: 5

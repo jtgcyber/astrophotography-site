@@ -1,5 +1,6 @@
 ---
 title: "Horsehead & Flame Nebula"
+slug: "horsehead-and-flame"
 target: "B33 / NGC 2024"
 date: 2026-01-25
 integration_hours: 6

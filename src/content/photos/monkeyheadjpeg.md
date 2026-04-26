@@ -1,5 +1,6 @@
 ---
 title: "Monkey Head Nebula"
+slug: "monkey-head-nebula"
 target: "NGC 2174"
 date: 2026-02-10
 integration_hours: 6

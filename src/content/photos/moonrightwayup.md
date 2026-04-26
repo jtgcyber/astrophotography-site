@@ -1,5 +1,6 @@
 ---
 title: "The Moon"
+slug: "moon"
 target: "Moon"
 date: 2026-03-10
 featured: false

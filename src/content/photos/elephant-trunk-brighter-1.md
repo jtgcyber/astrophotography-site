@@ -1,5 +1,6 @@
 ---
 title: "Elephant's Trunk Nebula"
+slug: "elephant-trunk-nebula"
 target: "IC 1396A"
 date: 2025-09-12
 integration_hours: 7

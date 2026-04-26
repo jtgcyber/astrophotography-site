@@ -6,7 +6,7 @@ import Layout from '../../layouts/Layout.astro';
 export async function getStaticPaths() {
   const photos = await getCollection('photos');
   return photos.map((photo) => ({
-    params: { slug: photo.id },
+    params: { slug: photo.data.slug ?? photo.id },
     props: { photo },
   }));
 }

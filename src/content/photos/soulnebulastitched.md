@@ -1,5 +1,6 @@
 ---
 title: "Soul Nebula"
+slug: "soul-nebula"
 target: "IC 1848"
 date: 2025-11-15
 integration_hours: 8

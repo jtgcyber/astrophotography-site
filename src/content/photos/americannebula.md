@@ -1,5 +1,6 @@
 ---
 title: "North America Nebula"
+slug: "north-america-nebula"
 target: "NGC 7000"
 date: 2025-08-15
 integration_hours: 6

@@ -1,5 +1,6 @@
 ---
 title: "Crescent Nebula (Take 2)"
+slug: "crescent-nebula"
 target: "NGC 6888"
 date: 2025-08-20
 integration_hours: 7

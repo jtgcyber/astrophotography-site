@@ -11,6 +11,7 @@ const photos = defineCollection({
       integration_hours: z.number(),
       featured: z.boolean().default(false),
       image: image(),
+      full_res: z.string().url().optional(),
       location: z.string().optional(),
       equipment: z.object({
         mount: z.string(),

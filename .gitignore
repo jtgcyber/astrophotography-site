@@ -15,6 +15,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# photo inbox (full-res originals — processed by npm run add-photos)
+photos-inbox/
+
 # macOS / editor cruft
 .DS_Store
 .vscode/

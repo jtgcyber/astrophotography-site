@@ -49,6 +49,11 @@ const acq = photo.data.acquisition;
         sizes="(min-width: 1280px) 1200px, 100vw"
         loading="eager"
       />
+      {photo.data.full_res && (
+        <a href={photo.data.full_res} target="_blank" rel="noopener noreferrer" class="full-res-link">
+          View full resolution ↗
+        </a>
+      )}
     </figure>
 
     <!-- prose + tech specs -->
@@ -107,6 +112,21 @@ const acq = photo.data.acquisition;
     width: 100%;
     height: auto;
     border-radius: 4px;
+  }
+  .full-res-link {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 16px;
+    border: 1px solid var(--border-strong);
+    border-radius: 4px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .full-res-link:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
   }
 
   .body {

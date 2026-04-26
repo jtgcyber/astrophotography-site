@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import rigImage from '../assets/rig.jpeg';
 
 const sections = [
   {
@@ -52,6 +54,15 @@ const sections = [
     </p>
   </section>
 
+  <section class="wrap rig-photo">
+    <Image
+      src={rigImage}
+      alt="Current astrophotography rig"
+      widths={[600, 900, 1200]}
+      sizes="(min-width: 1280px) 1100px, 90vw"
+    />
+  </section>
+
   <section class="wrap sections">
     {sections.map((s) => (
       <article class="section">
@@ -79,6 +90,16 @@ const sections = [
   .lead {
     max-width: 60ch;
     color: var(--text-muted);
+  }
+  .rig-photo {
+    margin-bottom: 56px;
+  }
+  .rig-photo :global(img) {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    max-height: 520px;
+    object-fit: cover;
   }
   .sections {
     display: flex;

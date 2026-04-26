@@ -1,0 +1,18 @@
+---
+title: "Milky Way"
+target: "Milky Way Core"
+date: 2026-04-26
+integration_hours: 0
+featured: false
+image: "./milkywayiphone.jpg"
+full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/milkywayiphone.jpg"
+location: ""
+equipment:
+  mount: "Unknown"
+  telescope: "iPhone"
+  camera: "iPhone"
+  focal_length_mm: 0
+processing: ""
+---
+
+A wide-field capture of the Milky Way shot on an iPhone — proof that you don't always need a full rig to enjoy the night sky. Modern smartphone night modes can stack multiple short exposures to pull out the galactic core, dark dust lanes, and even a hint of the Sagittarius star clouds. It's a very different experience from deep-sky imaging, but there's something special about capturing our home galaxy with something that fits in your pocket.

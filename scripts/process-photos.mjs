@@ -31,10 +31,12 @@ const results = [];
 
 for (const file of files) {
   const slug = path.parse(file).name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const ext = path.extname(file).toLowerCase();
   const inputPath = path.join(INBOX, file);
   const webPath = path.join(OUTPUT, `${slug}.jpg`);
   const mdPath = path.join(OUTPUT, `${slug}.md`);
-  const blobName = `${slug}.jpg`;
+  const blobName = `${slug}${ext === '.jpeg' ? '.jpg' : ext}`;
+  const mimeTypes = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.tif': 'image/tiff', '.tiff': 'image/tiff' };
 
   console.log(`→ ${file} (slug: ${slug})`);
 
@@ -57,7 +59,7 @@ for (const file of files) {
     // 2. Upload full-res to Azure Blob Storage
     execSync(
       `az storage blob upload --account-name ${ACCOUNT} --container-name ${CONTAINER} ` +
-      `--name "${blobName}" --file "${inputPath}" --content-type image/jpeg ` +
+      `--name "${blobName}" --file "${inputPath}" --content-type ${mimeTypes[ext] || 'image/jpeg'} ` +
       `--auth-mode login --overwrite`,
       { stdio: 'pipe' }
     );

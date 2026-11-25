@@ -15,4 +15,4 @@ equipment:
 processing: "iPhone night mode."
 ---
 
-A wide-field capture of the Milky Way shot on an iPhone — proof that you don't always need a full rig to enjoy the night sky. Modern smartphone night modes can stack multiple short exposures to pull out the galactic core, dark dust lanes, and even a hint of the Sagittarius star clouds. It's a very different experience from deep-sky imaging, but there's something special about capturing our home galaxy with something that fits in your pocket.
+The Milky Way on an iPhone in night mode, from the dark skies at Campbeltown.

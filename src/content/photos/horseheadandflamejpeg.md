@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-Two iconic targets near Alnitak in Orion's Belt, roughly 1,375 light-years away. The Horsehead (Barnard 33) is a dark nebula — a dense pillar of dust silhouetted against the glowing emission nebula IC 434 behind it. Nearby, the Flame Nebula (NGC 2024) is an emission nebula whose intricate dark lanes are caused by foreground dust absorbing the light of the ionised hydrogen beyond. Together they're one of the most recognisable fields in astrophotography.
+Two nebulae next to Alnitak in Orion's Belt, about 1,375 light-years away. The Horsehead (Barnard 33) is dark dust in front of the glowing hydrogen of IC 434. The Flame Nebula (NGC 2024) is emission nebula crossed by dark lanes of foreground dust.

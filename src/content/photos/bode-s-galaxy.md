@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A famous interacting pair in Ursa Major, roughly 12 million light-years away. M81 (Bode's Galaxy) is a grand-design spiral with tightly wound arms, while M82 (the Cigar Galaxy) is a starburst galaxy being reshaped by the gravitational interaction — its core is erupting with superheated hydrogen plumes visible as red filaments in H-alpha. With enough integration time, a faint tidal bridge of stars becomes visible between the two.
+An interacting pair of galaxies in Ursa Major, about 12 million light-years away. M81 (Bode's Galaxy) is a grand-design spiral. M82 (the Cigar Galaxy) is a starburst galaxy, with star formation set off by its close pass with M81.

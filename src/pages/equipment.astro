@@ -20,14 +20,14 @@ const sections = [
   {
     name: 'Cameras',
     items: [
-      { label: 'ZWO ASI 071MC Pro', desc: 'Cooled OSC, 16MP APS-C sensor. Main imaging camera.' },
-      { label: 'ZWO ASI 120MM Mini', desc: 'Mono guide camera.' },
+      { label: 'ZWO ASI 071MC Pro', desc: 'Cooled one-shot-colour camera, 16MP APS-C sensor. Main imaging camera.' },
+      { label: 'ZWO ASI 120MM Mini', desc: 'Mono guide camera. Also used for the Moon.' },
     ],
   },
   {
     name: 'Filters',
     items: [
-      { label: 'Optolong L-Pro', desc: 'Broadband light pollution suppression for galaxies.' }
+      { label: 'Baader Neodymium Moon & Skyglow', desc: 'Cuts some of the orange streetlight glow. On for every deep-sky image here.' },
     ],
   },
   {
@@ -35,8 +35,9 @@ const sections = [
     items: [
       { label: 'N.I.N.A.', desc: 'Acquisition and sequencing.' },
       { label: 'PHD2', desc: 'Autoguiding.' },
-      { label: 'Siril', desc: 'Stacking and pre-processing.' },
-      { label: 'GraXpert', desc: 'Gradient and background removal.' },
+      { label: 'Siril', desc: 'Calibration, stacking, gradient removal and colour calibration (SPCC).' },
+      { label: 'GraXpert', desc: 'Noise reduction.' },
+      { label: 'StarNet2', desc: 'Star removal, so the nebula and stars can be stretched separately.' },
       { label: 'Photoshop', desc: 'Final stretch and finish.' },
     ],
   },
@@ -48,16 +49,16 @@ const sections = [
     <span class="eyebrow">Equipment</span>
     <h1>The kit</h1>
     <p class="lead">
-      A modest-aperture refractor setup optimised for portability and
-      narrowband imaging from a Bortle 7 garden. Most of the data on this
-      site was acquired with this rig.
+      Refractors, a one-shot-colour camera and a skyglow filter, mostly
+      from my back garden in Glasgow with the odd trip to darker skies in
+      Campbeltown.
     </p>
   </section>
 
   <section class="wrap rig-photo">
     <Image
       src={rigImage}
-      alt="Current astrophotography rig"
+      alt="ASKAR 120mm APO with the ASI 071MC Pro and a guide scope, on the EQ6-R Pro mount"
       widths={[600, 900, 1200]}
       sizes="(min-width: 1280px) 1100px, 90vw"
     />

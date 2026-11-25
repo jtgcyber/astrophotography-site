@@ -12,7 +12,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A beautiful group of three interacting galaxies in Leo, roughly 35 million light-years away. M65 and M66 are bright spirals visible in smaller scopes, while NGC 3628 (the Hamburger Galaxy) is seen edge-on with a prominent dust lane bisecting its disc. With deep integration, a faint tidal tail extends from NGC 3628 — a 300,000-light-year stream of stars pulled out by gravitational interaction with its neighbours.
+Three interacting galaxies in Leo, about 35 million light-years away: the spirals M65 and M66, and NGC 3628 (the Hamburger Galaxy), seen edge-on with a dust lane through its middle.

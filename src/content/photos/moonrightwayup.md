@@ -16,4 +16,4 @@ equipment:
 processing: "Stacked best frames, wavelets in Registax."
 ---
 
-Our nearest celestial neighbour at just 384,400 km — close enough to resolve individual craters, mountain ranges, and the ancient lava plains of the maria. Lunar imaging is a completely different discipline from deep-sky: short exposures, high frame rates, and atmospheric seeing becomes the limiting factor rather than integration time. Stacking the sharpest frames from a video sequence and applying wavelets can bring out astonishing surface detail.
+The Moon, with the 80ED and the ASI120MM Mini. Lunar imaging is different from deep-sky: lots of short frames, and the steadiness of the air sets the limit rather than total exposure. The sharpest frames were stacked and sharpened with wavelets in Registax.

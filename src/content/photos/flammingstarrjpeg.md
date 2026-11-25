@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-An emission and reflection nebula in Auriga, roughly 1,500 light-years away. The central star AE Aurigae is a runaway — ejected from the Orion Nebula region about 2.5 million years ago — and is now ploughing through this unrelated cloud of gas and dust, energising it as it passes. The blue regions are starlight reflected off dust grains, while the red is ionised hydrogen. The wispy, flame-like streamers give the nebula its name.
+An emission and reflection nebula in Auriga, about 1,500 light-years away. Its central star, AE Aurigae, is a runaway thrown out of the Orion Nebula region a few million years ago, and it's now passing through this unrelated cloud and lighting it up. The blue is starlight reflected off dust; the red is hydrogen.

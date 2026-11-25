@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { photo } = Astro.props;
 const { Content } = await render(photo);
 
-const fmt = new Intl.DateTimeFormat('en-US', {
+const fmt = new Intl.DateTimeFormat('en-GB', {
   day: 'numeric',
   month: 'long',
   year: 'numeric',

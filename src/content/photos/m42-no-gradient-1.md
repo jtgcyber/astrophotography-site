@@ -13,7 +13,7 @@ equipment:
   telescope: "Sky-Watcher Evostar 80ED"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 480
-  filters: "Optolong L-Pro" 
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A second take on the Orion Nebula — same data or a different session, reprocessed with improved gradient removal. M42 is notoriously tricky to process cleanly because the bright Trapezium core can blow out while the faint outer nebulosity disappears into gradients and light pollution. Getting the background flat and the transitions smooth is half the battle with this target.
+The Orion Nebula again, this time with the 80ED. M42 is hard to process: the core is very bright and the outer nebula is faint, and light pollution makes it worse. Getting rid of the gradient was the main job on this one.

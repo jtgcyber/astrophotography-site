@@ -8,4 +8,4 @@ image: "./orionv3.jpg"
 full_res: "https://astrophotojtgcyber.blob.core.windows.net/full-res/orionv3.jpg"
 ---
 
-A third version of the Orion Nebula — a target worth revisiting as equipment and processing skills evolve. Each iteration tends to reveal more of the faint outer nebulosity, better control of the blazing Trapezium core, and smoother colour transitions. Comparing versions side by side is one of the best ways to see how far your astrophotography has come.
+My third version of the Orion Nebula.

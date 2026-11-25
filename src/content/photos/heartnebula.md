@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A vast emission nebula in Cassiopeia, roughly 7,500 light-years away and spanning about 165 light-years across. Its heart-shaped silhouette is sculpted by the open cluster Melotte 15 at its centre — a group of young, massive stars whose intense radiation and stellar winds carve out the surrounding hydrogen gas. It neighbours the Soul Nebula (IC 1848), and the pair are often imaged together as the "Heart and Soul."
+A large emission nebula in Cassiopeia, about 7,500 light-years away. The young, massive stars of the cluster Melotte 15 at its centre are carving out the gas around them. It sits next to the Soul Nebula (IC 1848), which is also in the gallery.

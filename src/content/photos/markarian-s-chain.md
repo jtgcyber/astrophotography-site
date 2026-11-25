@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A sweeping arc of galaxies forming part of the Virgo Cluster, roughly 50–60 million light-years away. The chain includes the bright ellipticals M84 and M86 along with several interacting pairs — notably "The Eyes" (NGC 4435/4438). What looks like a neat line on the sky is partly a true physical association and partly a line-of-sight coincidence. It's a wide-field target that rewards longer focal lengths with dozens of faint background galaxies filling the frame.
+A curved line of galaxies in the Virgo Cluster, about 50–60 million light-years away, including the big ellipticals M84 and M86 and the interacting pair NGC 4435/4438 ("The Eyes"). Some of the chain is a real group and some is just line-of-sight.

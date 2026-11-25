@@ -12,7 +12,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-The eastern arc of the Veil Nebula supernova remnant in Cygnus, also known as Caldwell 33. The entire Veil complex is the expanding debris from a massive star that exploded roughly 8,000 years ago, now spanning about 3° of sky — too large for most telescopes in a single frame. This eastern section shows intricate shock-front filaments where the expanding blast wave ploughs into the surrounding interstellar medium, lighting up oxygen (blue-green) and hydrogen (red) in dramatic detail.
+The eastern arc of the Veil Nebula (NGC 6992, Caldwell 33) in Cygnus, part of the remnant of a star that went supernova thousands of years ago. The filaments are where the blast wave is running into the surrounding gas, with hydrogen showing red and oxygen blue-green.

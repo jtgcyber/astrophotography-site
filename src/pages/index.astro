@@ -11,7 +11,7 @@ const allPhotos = (await getCollection('photos')).sort(
 const featured = allPhotos.find((p) => p.data.featured) ?? allPhotos[0];
 const recent = allPhotos.filter((p) => p.id !== featured.id).slice(0, 6);
 
-const fmt = new Intl.DateTimeFormat('en-US', {
+const fmt = new Intl.DateTimeFormat('en-GB', {
   month: 'long',
   year: 'numeric',
 });

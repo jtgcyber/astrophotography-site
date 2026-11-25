@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-The companion to the Heart Nebula (IC 1805), sitting side by side in Cassiopeia at about 6,500 light-years. The Soul is a large emission nebula dotted with several small open clusters and dark Bok globules — dense knots of dust and gas that may be collapsing to form new stars. This is a stitched mosaic, combining multiple panels to capture the full extent of the nebula — a technique that trades a lot of acquisition and processing time for a wider field of view than any single frame could deliver.
+The Soul Nebula (IC 1848) in Cassiopeia, about 6,500 light-years away, next to the Heart Nebula (IC 1805). It holds several small open clusters and dark globules of dust. This is a mosaic of several panels stitched together.

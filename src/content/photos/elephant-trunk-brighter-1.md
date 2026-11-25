@@ -13,7 +13,7 @@ equipment:
   telescope: "Sky-Watcher Evostar 80ED"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 480
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A dense, winding column of gas and dust within the much larger IC 1396 emission nebula in Cepheus, about 2,400 light-years away. The "trunk" is a dark globule being compressed and illuminated by the massive central star HD 206267 — the radiation pressure is actively triggering new star formation inside the pillar while simultaneously eroding it away. Narrowband imaging reveals the glowing rim where ionisation meets cold molecular gas.
+A column of gas and dust inside the much larger IC 1396 nebula in Cepheus, about 2,400 light-years away. It's being lit up and eroded by the massive star HD 206267 at the centre of IC 1396, and new stars are forming inside it.

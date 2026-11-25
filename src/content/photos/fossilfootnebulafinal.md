@@ -13,7 +13,7 @@ equipment:
   telescope: "ASKAR 120mm APO"
   camera: "ZWO ASI 071MC Pro"
   focal_length_mm: 840
-  filters: "Optolong L-Pro"
+  filters: "Baader Neodymium Moon & Skyglow"
 ---
 
-A compact emission nebula in Perseus, about 10,700 light-years distant. Also catalogued as Sh2-206, it's illuminated by a single hot O-type star that carves out a cavity in the surrounding molecular cloud. It's a less frequently imaged target — not as large or well-known as the showpiece nebulae — which makes it a satisfying capture. The bright central region transitions into faint tendrils of gas at the edges where the stellar wind meets denser material.
+A compact emission nebula in Perseus (NGC 1491, Sh2-206), about 10,700 light-years away, lit by a single hot O-type star that has cleared a cavity in the cloud around it. It doesn't get imaged as often as the big showpiece nebulae.
